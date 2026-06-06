@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Groovekeeper</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="/games.html" class="active">Back to Games</a>
+                <a href="/lighting.html">Lighting Work</a>
+                <a href="/contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+         <div class="case-hero-logo-container">
+            <!-- Drop your main game transparent logo file here -->
+            <img src="/assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img">
+        </div>
+
+        <header class="wireframe-case-header">
+            <h1>Groovekeeper</h1>
+            <p class="wireframe-intro-p">
+                In Spring 2026, I led the team for Groovekeeper while also being the head programmer.
+                I was in charge of the art and music direction and help lead the game to have its
+                coherent visual and audio style. I also implemented a lot of the UI art and gave it
+                visually pleasing animation.
+            </p>
+            <div class="download-action-row">
+                <a href="https://poyomain.itch.io/groovekeeper" class="pill-btn" target="_blank">Download Page</a>
+            </div>
+        </header>
+
+        <section class="wireframe-meta-bar">
+            <div class="meta-column">
+                <span class="meta-title">Role</span>
+                <span class="meta-val">Gameplay/UI Programmer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Team Size</span>
+                <span class="meta-val">30 Developers</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Duration</span>
+                <span class="meta-val">3 Months</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Engine/Tools</span>
+                <span class="meta-val">Unity / C#</span>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Song Select Menu</h3>
+                    <p>I wanted Groovekeeper's song select menu to be very (word for visually
+                        pleasing animation-wise) so using the drawn assets that our UI artists
+                        provided, I implemented a carousel system for the song select menu. This way
+                        players can navigate through different songs quickly and then can see the information
+                        of the song, by clicking on the middle-most selected song button.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="/assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Beatmap System</h3>
+                    <p>I initially planned to use MIDI files to write Groovekeeper's beatmaps, however,
+                        Unity natively cannot read MIDI files so I had to come up with another solution. I then
+                        learned MIDI files can be easily converted to BYTES files. Using that knowledge, I wrote
+                        a script that parses bytes files and reads data such as the note's SPN and length,
+                        which determines factors like which lane the note is in, if its a double or hold note, and more.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="/assets/vids/Groovekeeper_Beatmap.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Music Sync</h3>
+                    <p>One of the most important elements of rhythm games to me is that the actions are synced
+                        to the music that is being played, so I wanted to make sure Groovekeeper didn't have any
+                        issues with that. I created a system that starts the spawning of notes and the music
+                        simultaneously, including parameters so the other team members that were implementing
+                        new songs could adjust the start delay of the music/notes, the speed in which notes move
+                        across the screen, add beatmaps for different difficulties, and more. This sped up our
+                        implementation speed a lot.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="/assets/vids/Groovekeeper_MusicSync.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Boss Battle</h3>
+                    <p>With a desire to add a more intense bout with the boss of a song, I discussed with my team
+                        and we decided a boss battle portion to the game. I was in charge of programming the system
+                        that this mode ran on. The system uses the same music playing script as the main gameplay,
+                        but instead of parsing a beatmap at the beginning, each boss has a set of attacks they can do
+                        the beat. Each attack is a struct that holds the move type, and the beats from when the attack
+                        starts that the attack is done on. The system will send a message saying the boss should start
+                        its attack and then the boss will animate to perform the set of attacks in sync with the song's
+                        bpm.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="/assets/vids/Groovekeeper_BossBattle.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="/games.html" class="bubble-games-btn">Back to Games</a>
+        </div>
+
+        <footer>
+            <a href="/index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="/contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+    </div>
+</body>
+</html>
