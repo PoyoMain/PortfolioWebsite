@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Breakroom Bots</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html" class="active">Back to Games</a>
+                <a href="../../lighting.html">Lighting Work</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <div class="case-hero-logo-container">
+            <img src="../../assets/images/BreakroomBots_Logo.png" alt="Breakroom Bots Logo" class="case-hero-logo-img">
+        </div>
+
+        <header class="wireframe-case-header">
+            <h1>Breakroom Bots</h1>
+            <p class="wireframe-intro-p">
+                In Fall 2025, I was the teamlead and head programmer for Breakroom Bots.
+                I handled the art and music direction and help lead the game to have a
+                coherent visual and audio style. I was also in charge of a lot of the networking
+                systems present in the game.
+            </p>
+            <div class="download-action-row">
+                <a href="https://poyomain.itch.io/breakroom-bots" class="pill-btn" target="_blank">Download Page</a>
+            </div>
+        </header>
+
+        <section class="wireframe-meta-bar">
+            <div class="meta-column">
+                <span class="meta-title">Role</span>
+                <span class="meta-val">Gameplay/Network Programmer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Team Size</span>
+                <span class="meta-val">14 Developers</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Duration</span>
+                <span class="meta-val">3 Months</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Engine/Tools</span>
+                <span class="meta-val">Unity / C#</span>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Lobby System</h3>
+                    <p> Using Unity's Relay system, I set up a lobby system in which players can either create
+                        their own lobby or join someone else's lobby. You have the option to make a lobby public
+                        or private. If public, it will be displayed on other player's lobby screens, but if private
+                        players have the option to join via a generated lobby code as well. Players also have the option
+                        to change their display name.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/BreakroomBots_Lobby.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Networking Gameplay</h3>
+                    <p> Also using Unity's Relay service, I send data from one system to another via Unity's provided
+                        server. Trying to keep the data that is transfered simple, I use mainly ints to communicate
+                        which cards the other player has dealt/played. I also set up a lobby system where players can 
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/BreakroomBots_Networking.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Card Conditions and Effects</h3>
+                    <p>Each card in Breakroom Bots has an effect with some having conditions to activate them
+                        and others whose effects would happen if the condition wasn't satified. I was responsible for 
+                        programming a system that allowed for cards to be easily implemented, which included the name,
+                        splash art, conditions, and the effects that pair with them. 
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/BreakroomBots_CardEffects.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Main Menu Animations</h3>
+                    <p>I wanted the main menu to have menus spread across the breakroom, so I used a combination
+                        of the Cinemachine plugin and Unity's UGUI system to have world-space UI and a virtual
+                        cameras that blend between one another to frame each of the menus.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/BreakroomBots_MainMenu.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../games.html" class="bubble-games-btn">Back to Games</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+    </div>
+</body>
+</html>
