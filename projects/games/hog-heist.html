@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Hog Heist</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html" class="active">Back to Games</a>
+                <a href="../../lighting.html">Lighting Work</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <div class="case-hero-logo-container">
+            <img src="../../assets/images/HogHeist_Logo.png" alt="Hog Heist Logo" class="case-hero-logo-img">
+        </div>
+
+        <header class="wireframe-case-header">
+            <h1>Hog Heist</h1>
+            <p class="wireframe-intro-p">
+                In Spring 2025, I got together with 7 other developers to participate in the Gwinett County Public Library (GCPL)
+                Game Jam in which we made Hog Heist, a physics-based stealth game. I was in charge of a lot of the game's UI and
+                tutorial. We won best overall and best sound design during the GCPL Jam as well as participated in the Southern-Fried
+                Game Expo's Showcase and released on Steam that same year.
+            </p>
+            <div class="download-action-row">
+                <a href="https://store.steampowered.com/app/3823050/Hog_Heist/" class="pill-btn" target="_blank">Download Page</a>
+            </div>
+        </header>
+
+        <section class="wireframe-meta-bar">
+            <div class="meta-column">
+                <span class="meta-title">Role</span>
+                <span class="meta-val">UI/Gameplay Programmer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Team Size</span>
+                <span class="meta-val">8 Developers</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Duration</span>
+                <span class="meta-val">4 Months</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Engine/Tools</span>
+                <span class="meta-val">Unity / C#</span>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Bag Mechanic</h3>
+                    <p>In our game you need to take items from a museum, balancing them in your
+                        bag until you can dump them off into the truck. Using Unity's UGUI system,
+                        I made a world-space UI for the bag and synced it's movement to the player's
+                        rigidbody to have it feel like it shakes when you move. I also used 3D colliders
+                        combined with a constrained rigidbody for the objects in the bag to mimic 2D physics.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/HogHeist_Bag.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Tutorial Level</h3>
+                    <p>In order to teach player's the controls and objective of the game, I made a tutorial
+                        level which provides a small slice of gameplay along with UI text so player's can
+                        get a feel for the game before diving into the full thing. Using set dialogue triggers
+                        placed around the map, I was able to provide players with information right before they
+                        reached an area before they applied it.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/HogHeist_Tutorial.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Main/Results Menus</h3>
+                    <p>I was also responsible for our main menu and results screen. I wanted them to feel lively
+                        while also matching the theming of our game so using the built-in animator tool, I keyframed
+                        a screen transition for the main menu and also animated our protagonist and their truck for both
+                        menus. I was responsible of designing the layout of each as well.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <source src="../../assets/vids/HogHeist_MainResultsScreen.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../games.html" class="bubble-games-btn">Back to Games</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+    </div>
+</body>
+</html>
