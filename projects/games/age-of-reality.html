@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Age of Reality</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,54 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/AgeOfReality_Logo.png" alt="Age of Reality Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Age of Reality</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Spring 2024, I was the co-teamlead and head programmer for Age of Reality
+                a fantasy turn-based RPG, where you had to draw patterns on the screen to
+                use spells or sword attacks in battle. I handled the programming, level design,
+                and voice direction of the game. I also handled battle system, UI, and sword attack
+                patterns in the game.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://poyomain.itch.io/age-of-reality" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Team Lead & Gameplay/UI Programmer]</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">37 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">3 Months</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Turn-Based Battle System</h3>
+                    <p>For the battle system, I use a state machine to manage the different battle states of each
+                        character on the field. First organizing everyone by their speed stat, and then giving the player and
+                        enemies their own unique states since the player needs to choose an attack or item to use.
+                        Each attack the player has has a scriptable object associated with it that holds the attack
+                        type (melee or magic) as well as the difficulty of the attack. It will spawn it a minigame
+                        corresponding with the attack type and the player will then have to draw on the screen to
+                        perform the minigame, dealing damage based on how well they did. This turn system repeats until
+                        either the player or all the enemies have been defeated.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +80,11 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Sword Attack Minigame</h3>
+                    <p>For the melee minigame, the player has to trace the screen, moving their mouse towards a dot icon.
+                        When they reach the dot another will spawn. This will continue until the minigame is complete (a set
+                        amount of dots have been hit), the timer runs out, or the player releases the mouse button. For visual
+                        polish, a trail is drawn after the mouse as well representing a sword swing.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,30 +99,11 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Cutscene Player</h3>
+                    <p>For the game's opening cutscene, I use Unity's Timeline to organize all the voice lines, splash art
+                        and dialogue into one scene. I created a system that pauses the cutscene after a set shot is finished,
+                        having it so the player can click to continue, so they can get a chance to look at the art or re-read
+                        dialogue. The player can also choose to skip the cutscene entirely, moving on to the main gameplay.
                     </p>
                 </div>
                 <div class="row-media-box">

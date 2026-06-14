@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Shape Slasher</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,56 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/ShapeSlasher_Logo.png" alt="Shape Slasher Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Shape Slasher</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Spring 2025, I was the teamlead and head programmer for Shape Slasher,
+                a platformer where each time you play, the map is procedurally generated,
+                making the experience different every time. I handled the art and music
+                direction and help give the game a consistent visual and audio style. I
+                also handled the UI and procedural map generation algorithm the game uses.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://poyomain.itch.io/shape-slasher" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Team Lead & Gameplay/UI Programmer</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">25 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">3 Months</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Map Generation</h3>
+                    <p>In order to make each run feel different and unique, I created a two-pass
+                        procedural generation algorithm that separates dungeon layout from room
+                        placement. It first uses a random-walk strategy with constraint checks
+                        to build a cohesive grid layout of standard rooms, backtracking whenever
+                        it hits a dead end. Once a layout is made, a second pass analyzes the map
+                        to swap specific standard rooms with key focal points like boss, shop,
+                        and challenge rooms. The number of total rooms and focal points
+                        can be adjusted as well. Given the limited time frame, rather than generating
+                        each room, the game uses prebuilt rooms and places a number of them during
+                        the map building process.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +82,14 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Combat System</h3>
+                    <p>For combat, I implemented a system which uses 2D box colliders to indicate
+                        both hitboxes and hurtboxes. I wanted to separate this from the player or
+                        any particular enemy so objects/hazards in the scene could utilize these
+                        to deal or take damage. For the player and enemys I sync the hitboxes to
+                        their attack visuals via the in-engine animator. This way the level designers
+                        can easily manipulate where these hitboxes are as well as other values like
+                        damage and knockback.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,30 +104,15 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Enemy AI</h3>
+                    <p>All enemies, including the boss, use a state machine combined with triggers and
+                        semi-frequent raycasts to move around and attack. If the player is not within
+                        one of their detection triggers, they will move around idly, using raycasts to
+                        avoid walls/ledges. If the player is in the detection trigger, and a raycast from
+                        the enemy to the player hits, then depending on factors like the player's relative
+                        location, which attacks the enemy has done previously, and if the enemy was just
+                        recently attacked, enemies have set moves they can do. This way they feel more alive,
+                        reacting to the player's actions.
                     </p>
                 </div>
                 <div class="row-media-box">

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Abyssal Eats</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html" class="active">Back to Games</a>
+                <a href="../../lighting.html">Lighting Work</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <div class="case-hero-logo-container">
+            <img src="../../assets/images/AbyssalEats_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img">
+        </div>
+
+        <header class="wireframe-case-header">
+            <h1>Abyssal Eats</h1>
+            <p class="wireframe-intro-p">
+                In Spring 2024, I participated in the Gwinett County Public Library (GCPL) Game Jam with Abyssal Eats,
+                a card-cooking game where you have to combine different ingredient cards to make recipes for your
+                monster customers. Abyssal Eats won the Wildcard Award at the Jam.
+            </p>
+            <div class="download-action-row">
+                <a href="https://poyomain.itch.io/abyssal-eats" class="pill-btn" target="_blank">Download Page</a>
+            </div>
+        </header>
+
+        <section class="wireframe-meta-bar">
+            <div class="meta-column">
+                <span class="meta-title">Role</span>
+                <span class="meta-val">Sole Developer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Team Size</span>
+                <span class="meta-val">1 Developer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Duration</span>
+                <span class="meta-val">1.5 Months</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Engine/Tools</span>
+                <span class="meta-val">Unity / C#</span>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Crafting System</h3>
+                    <p>In Abyssal Eats, I use scriptable objects to hold the different card types, ingredients and
+                        dishes and I use one to hold the different recipes as well. When a player places a card in
+                        one of the slots, an event is sent to the crafting manager and the crafting manager converts
+                        the names of all the cards in the slots into a string and uses it as a key to search through
+                        a list of recipes to find one that uses the same ingredients as what its played on the grid.
+                        This method handles order as well, so cards can be played in any order and would still work.
+                        If a recipe is found, it discards the cards used and spawns in the final result card and places it
+                        in the player's hand.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                        Your browser does not support the video tag. -->
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Card Movement/Placement</h3>
+                    <p>For card movement, I use the IPointer and IDrag interfaces to register the mouse hovering and moving
+                        the cards. When the card has been placed, it sends out a raycast to make sure it's over a slot can
+                        go into, and if it is, it'll change it's parent to be that card slot and reset it's position. Otherwise,
+                        it will lerp back to it's position within the player's hand. 
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                        Your browser does not support the video tag. -->
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../games.html" class="bubble-games-btn">Back to Games</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+    </div>
+</body>
+</html>

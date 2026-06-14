@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | GrewPrints</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,31 +18,34 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/GrewPrints_Logo.png" alt="GrewPrints Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>GrewPrints</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Summer 2024, me and two others participated in the GameMaker's Toolkit Game Jam with GrewPrints,
+                a size-manipulation puzzle game. In the game you have to reach the flag by moving and changing the
+                size of objects in a room. I was responsible for player movement and the interactions with other
+                objects in the scene as well as level implementation.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://poyomain.itch.io/grewprints" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Gameplay Programmer & Asset Implementer]</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">3 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">48 hours</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
@@ -53,11 +56,13 @@
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Player Movement</h3>
+                    <p>Implementing player movement was a bit tricky due to the fixed camera and diagonal
+                        view of the map. I ultimately decided on making the movement orthogonal based on 
+                        the camera's view of the level rather than having it be diagonal after playtesting
+                        made it clear it was easier for players. The player has a capsule collider with
+                        a rigidbody and force is applied based on which movement keys the player is holding.
+                        Jumping is done by adding force upwards to the player.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +77,11 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Object Behavior</h3>
+                    <p>I was responsible for coding the different behavior for a lot of the objects in the game.
+                        The trampoline applies a force when a rigidbody comes in contact with a trigger collider
+                        set on the top-middle of it and the ladder does a similar thing when the player is moving
+                        into the front of the ladder. 
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,30 +96,11 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Level Implementation</h3>
+                    <p>When our puzzle/level designer finished designing and modeling out the level, I took
+                        it into Unity to set it up to play. I added specific object prefabs in the locations
+                        they were outlined on the design image for the level and then playtested through it
+                        to confirm it was possible to beat, but also that there were no unintended solutions.
                     </p>
                 </div>
                 <div class="row-media-box">

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Beam Breakout</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html" class="active">Back to Games</a>
+                <a href="../../lighting.html">Lighting Work</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <div class="case-hero-logo-container">
+            <img src="../../assets/images/BeamBreakout_Logo.png" alt="Beam Breakout Logo" class="case-hero-logo-img">
+        </div>
+
+        <header class="wireframe-case-header">
+            <h1>Beam Breakout</h1>
+            <p class="wireframe-intro-p">
+                During Spring 2025, me and 4 other devs participated in the GameMaker's Toolkit (GMTK) Game Jam with
+                Beam Breakout, a light-based puzzle game. The goal of the game was to manipulate a beam of light 
+                flowing into your prison cell to melt the locks and escape. You needed to utilize the reflective
+                prisoners as well as your magnifying glass head to make beams stronger to melt more heavy duty locks.
+            </p>
+            <div class="download-action-row">
+                <a href="https://poyomain.itch.io/beam-breakout" class="pill-btn" target="_blank">Download Page</a>
+            </div>
+        </header>
+
+        <section class="wireframe-meta-bar">
+            <div class="meta-column">
+                <span class="meta-title">Role</span>
+                <span class="meta-val">Gameplay Programmer</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Team Size</span>
+                <span class="meta-val">5 Developers</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Duration</span>
+                <span class="meta-val">4 Days</span>
+            </div>
+            <div class="meta-column">
+                <span class="meta-title">Engine/Tools</span>
+                <span class="meta-val">Unity / C#</span>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <section class="alternating-row">
+                <div class="row-text">
+                    <h3>Light Reflection Mechanic</h3>
+                    <p>To make the base reflection mechanic of the game, I have a script for reflective objects
+                        that makes it so when hit by a beam, they shoot out another beam in their forward direction.
+                        Being hit by two or more beams at the same time, upgrades the beam that is shot out to the next
+                        level of the lowest level beam that it is being hit with. So if being hit with a level 2 and level
+                        1 beam, a level 2 beam will be shot out, but if being hit with both level 2's, a level 3 beam will
+                        be shot out.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                        Your browser does not support the video tag. -->
+                    </video>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <section class="alternating-row reversed">
+                <div class="row-text">
+                    <h3>Puzzle Design</h3>
+                    <p>I was also in charge of designing/implementing the game's puzzles. I would create puzzles using
+                        external drawing software and send them to the other members to see overall reactions to the
+                        puzzle, including how easy or hard it was, which parts they got stuck on, and if they solved
+                        it using an unintended solution. After finalizing the puzzle design, I would implement it into
+                        Unity and set it up to be played.
+                    </p>
+                </div>
+                <div class="row-media-box">
+                    <video class="row-media-video" playsinline autoplay loop muted>
+                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                        Your browser does not support the video tag. -->
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../games.html" class="bubble-games-btn">Back to Games</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+    </div>
+</body>
+</html>

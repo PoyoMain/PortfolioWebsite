@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Spotlight Showdown</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,55 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/SpotlightShowdown_Logo.png" alt="Spotlight Showdown Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Spotlight Showdown</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In 2026, I was brought onto the team for Spotlight Showdown, a rhythm action fighting
+                game for Global Game Jam. For the 48-hour jam, I was responsible for the main rhythm
+                mechanic the game uses for most of the actions. We won Best Overall at our location,
+                moving on to compete in the Best in Georgia 2026 competion where I was moved primarily
+                onto UI programming. We won Best in Georgia and now we are working to fully finish the game
+                to release on Steam.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://nathannemyman.itch.io/spotlightshowdown" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Gameplay/UI Programmer</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">15 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">2 Months (Ongoing)</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Multiplayer Initialization</h3>
+                    <p>In order to get both players initialized. I used Unity's Player Input Manager
+                        component to spawn prefabs that have each have a custom PlayerConfig class that
+                        holds the PlayerInput component, the ScriptableObject of the selected character,
+                        and the player index. I use a custom ConfigManager class set to DontDestroyOnLoad
+                        to store the configs. When the game starts, it spawns each players character prefab
+                        it its set location and initializes the different components on the prefab that need
+                        a reference to variables in the config class or to subscribe to the controls' events
+                        on the PlayerInput component.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +81,11 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Grab Mechanic</h3>
+                    <p>I was responsible for implemented a grab mechanic on top of our existing move system.
+                        Our system gives each move its own flag and has fields to use hitboxes and hurtboxes.
+                        I added a grab input in the input actinos and assign players a grab hitbox, setting
+                        it up so it's behavior was in line with the game's game design document.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,30 +100,14 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Main Menu & Character Select</h3>
+                    <p>For the main menu and character select, I tried using an additive scene loading
+                        approach. Since the main menu and character select share the same backdrop, and
+                        that back drop needs to listen for an event run on the character select to start
+                        animating, I have the backdrop in its own scene that persists when going from main
+                        menu to character select or vice versa. I also set up a system in which the players
+                        can see whether they're player 1 or 2 and the respective controller type they're using,
+                        using this information to initialize the character select as well
                     </p>
                 </div>
                 <div class="row-media-box">

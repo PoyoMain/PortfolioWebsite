@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Breadwinner</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,49 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/Breadwinner_Logo.png" alt="Breadwinner Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Breadwinner</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Spring 2025, I was brought onto the team of Breadwinner, a physics pogostick platformer
+                to program a lot of the UI for the game. I took designs from the team lead and UI designer/artist
+                and recreated the UI in-engine adding animations and other visual polish.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://nathannemyman.itch.io/breadwinner" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">UI Programmer</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">24 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">3 Months</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Pause Menu</h3>
+                    <p>For Breadwinner's pause menu, I implemented the design of navigating through a phone screen. I implemented
+                        all the art in engine and added animations for the menu opening and closing. I used the animator component
+                        to animate the phone screen's screen transitions between different submenus and animated icons growing and
+                        shrinking on click via code. I added a menu to adjust the game's different settings, and to view the different
+                        collectables the player had collected throughout their playthrough.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +75,12 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Results Screen</h3>
+                    <p>For the results screen there are a lot of stats that are being kept track of, like the number of money gained
+                        in a run, the number of hearts lost, and the number of enemies defeated. I was tasked with creating a menu that
+                        counted up those values in order as well as displaying a total letter ranking at the end. Using coroutines, I
+                        made a sequence that did this as well as adding skip functionality so player's can get back to gameplay quickly
+                        if they choose to do so.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,30 +95,13 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Comic Viewer</h3>
+                    <p>In Breadwinner, you can unlock a viewable comic by fully completing the game. I was in charge of the functionality
+                        of unlocking this comic as well as the page viewer allowing you to read it. I created an event that runs after all
+                        collectables are collected and upon trying to access the comic, does a check to see if all collectables have been
+                        collected. If they have, the player will be allowed to press the comic view button and see the comic. For the page
+                        viewer I subscribed events to navigate the pages to the navigate input action in the controls, so the players can
+                        read the comic playing with either keyboard or controller.
                     </p>
                 </div>
                 <div class="row-media-box">

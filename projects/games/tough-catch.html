@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Tough Catch</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,52 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/ToughCatch_Logo.png" alt="Tough Catch Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Tough Catch</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Fall 2024, I was the teamlead and head programmer for Tough Catch, a
+                fishing game where you play as a cyborg and have to use your robot parts
+                and fishing rod to go through several different fishing minigames to try
+                and catch the big boss of the lake. I handled the art and music
+                direction and help give the game a consistent visual and audio style. I also
+                handled a few minigames and the UI for certain portions of the game.
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://poyomain.itch.io/tough-catch" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Team Lead & Gameplay/UI Programmer</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">25 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">3 Months</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Scriptable Object Event System</h3>
+                    <p>For Tough Catch, I wanted to test out implementing an event system using ScriptableObjects to communicate
+                        events across different areas of the game. Each minigame has a scriptable object event variable that they
+                        subscribe to to listen for when to start and they broadcast an event through a scriptable object to let other
+                        scripts know they've ended. I also use this system for taking damage, letting other scripts know the fish you
+                        caught, and other aspects of the game as well.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +78,14 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Tuggle Phase Minigames</h3>
+                    <p>The minigames for this portion of the game all come at you at the same time, with a
+                        maximum at two happening at any particular moment so I wanted to have a state machine
+                        that juggles between the minigames in this phase and present them to the player, waiting
+                        until it finishes to shuffle a new one. Each minigame derives from a base class so if a
+                        minigame is designed and has the components necessary for it to start, run, and end, it can
+                        be added to this phase, or any phase in the game, and will play as normal. This way it's modular
+                        and was easy to add more minigames when ideas came up for new ones.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,11 +100,12 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Star System</h3>
+                    <p>To add a bit of replayability to the game, I added a star system that rewards the player with
+                        stars depending on how they play the game. They are awarded for different aspects of the game
+                        like catching the boss of the lake, completing the game on hard mode, and so on. I created an
+                        overall manager singleton for stars that is called on when a condition to earn one is completed.
+                        Then the results screen reads the data from this manager to display the correct amount of stars
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -110,11 +120,10 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Main Menu UI</h3>
+                    <p>Really wanting moving UI for the main menu, I used Cinemachine to have the camera move to different parts
+                        of the environment for different menus/submenus and used the animator to animate the different UGUI
+                        elements on screen to add more game feel.
                     </p>
                 </div>
                 <div class="row-media-box">

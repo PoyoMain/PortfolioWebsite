@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Project-Name</title>
+    <title>Project | Scorched Tide</title>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -18,46 +18,49 @@
         </nav>
 
         <div class="case-hero-logo-container">
-            <!-- <img src="../../assets/images/Groovekeeper_Logo.png" alt="Groovekeeper Logo" class="case-hero-logo-img"> -->
+            <img src="../../assets/images/ScorchedTide_Logo.png" alt="Scorched Tide Logo" class="case-hero-logo-img">
         </div>
 
         <header class="wireframe-case-header">
-            <h1>[Project Name]</h1>
+            <h1>Scorched Tide</h1>
             <p class="wireframe-intro-p">
-                [Put the project desc here. Describe the game and my role on it. Do full paragraph]
+                In Summer 2024, I was invited onto a team to participate in the Godot Wild Jam #69. We created Scorched Tide,
+                a wave shooter where you have to defend yourself on a desolated planet from undead fish trying to collect enough
+                oil to fuel your ship, fuel the tools you use to defend yourself, and enough to be allowed to come home to your
+                home planet. While we missed the inital deadline for the initial jam, we kept working to submit it to the F*ck
+                Capitalism Jam 2024
             </p>
             <div class="download-action-row">
-                <a href="https://itch.io" class="pill-btn" target="_blank">Download Page</a>
+                <a href="https://will-wrigh.itch.io/scorched-tide" class="pill-btn" target="_blank">Download Page</a>
             </div>
         </header>
 
         <section class="wireframe-meta-bar">
             <div class="meta-column">
                 <span class="meta-title">Role</span>
-                <span class="meta-val">[Gameplay Programmer]</span>
+                <span class="meta-val">Gameplay Programmer</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Team Size</span>
-                <span class="meta-val">[4 Developers]</span>
+                <span class="meta-val">5 Developers</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Duration</span>
-                <span class="meta-val">[2 Months]</span>
+                <span class="meta-val">2 weeks</span>
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">[Unity / C#]</span>
+                <span class="meta-val">Unity / C#</span>
             </div>
         </section>
 
         <main class="wireframe-sections">
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Player Movement</h3>
+                    <p>Scorched Tide was my first time in Godot, so I had to learn a lot of things from scratch. I used
+                        a RigidBody3D node combined with a capsule collider to add force to the player to get them to
+                        move. I created variables to fine tune the movement if needed.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -72,11 +75,13 @@
 
             <section class="alternating-row reversed">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Enemy AI</h3>
+                    <p>The Enemy AI in Scorched Tide is very simple in the fact that they constantly move towards the
+                        player, stopping right before them, and then attacking at a set rate. The hardest part was that,
+                        due to the non-flat nature of the map, a navigation mesh had to be used for the enemies to navigate
+                        it without getting stuck behind objects. Each enemy has a nav agent that reads the data from the
+                        generated nav mesh to move around objects. I marked certain objects like big rocks or the player's
+                        tool and ship as nav obstacles so enemies would move around them.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -91,11 +96,12 @@
 
             <section class="alternating-row">
                 <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
+                    <h3>Tool Mechanics</h3>
+                    <p>The player has two tools available to them. A gun and turrets around the map. The gun and turrets, both
+                        fire bullets, so I use the same class to spawn the projectile while different classes managed them for
+                        both tools, one being manual and the other, automatic. The turret uses an Area node and a set layer set-up
+                        to detect enemies around it. If an enemy is in range and the turret has fuel, it will rotate its head
+                        towards the enemy and fire.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -105,26 +111,7 @@
                     </video>
                 </div>
             </section>
-
-            <hr class="section-divider">
-
-            <section class="alternating-row reversed">
-                <div class="row-text">
-                    <h3>[Section Header]</h3>
-                    <p>[Describe this section. Stuff about why/how I did it, or the process of doing it. Make
-                        it sound smart-like. Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text 
-                        Filler text Filler text Filler text Filler text Filler text Filler text Filler text]
-                    </p>
-                </div>
-                <div class="row-media-box">
-                    <video class="row-media-video" playsinline autoplay loop muted>
-                        <!-- <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
-                        Your browser does not support the video tag. -->
-                    </video>
-                </div>
-            </section>
-
+            
         </main>
 
         <div class="back-games-ribbon-block">
