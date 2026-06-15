@@ -457,8 +457,9 @@ pre {
 }
 
 .compact-media {
-    width: 120px;
     height: 100%;
+    width: auto;
+    aspect-ratio: 16/ 9;
     background-color: #131e31;
     display: flex;
     align-items: center;
