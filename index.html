@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Calbert | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <nav>
@@ -30,32 +32,39 @@
 
         <section class="homepage-about-section">
             <h2>About Me</h2>
-            <p>I am a Unity Gameplay Programmer and Technical UI Designer with hands-on production leadership experience tracking engineering pipelines, refactoring architectural bottlenecks, and coordinating milestone delivery benchmarks with multi-discipline engine groups.</p>
-            <p>My core approach bridges architectural code modularity with sleek visual layout implementation, writing decoupled C# mechanics that remain straightforward to scale and balance without risking core frame rates or structural design profiles.</p>
+            <p>I am a Unity Gameplay Programmer and Technical UI Designer with hands-on production leadership experience
+                tracking engineering pipelines, refactoring architectural bottlenecks, and coordinating milestone
+                delivery benchmarks with multi-discipline engine groups.</p>
+            <p>My core approach bridges architectural code modularity with sleek visual layout implementation, writing
+                decoupled C# mechanics that remain straightforward to scale and balance without risking core frame rates
+                or structural design profiles.</p>
         </section>
 
         <main>
-            <div class="wireframe-grid">
+            <div class="homepage-video-grid">
+
                 <div class="grid-item-container">
-                    <span class="grid-label">Game Development Projects</span>
                     <a href="games.html" class="wireframe-box">
-                        <img src="img/gameplay-loop.gif" alt="Gameplay Integration Work" class="grid-gif">
+                        <video class="grid-box-video" playsinline autoplay loop muted>
+                            <source src="assets/vids/Reel_Games.mp4" type="video/mp4">
+                        </video>
+                        <div class="wireframe-box-overlay">
+                            <span class="wireframe-box-title">Game Development Projects</span>
+                        </div>
                     </a>
                 </div>
 
                 <div class="grid-item-container">
-                    <span class="grid-label">Technical & UI Work</span>
-                    <a href="games.html" class="wireframe-box">
-                        <img src="img/ui-systems.gif" alt="C# Script Tool Setups" class="grid-gif">
-                    </a>
-                </div>
-
-                <div class="grid-item-container">
-                    <span class="grid-label">Lighting & Art Direction</span>
                     <a href="lighting.html" class="wireframe-box">
-                        <img src="img/lighting-study.gif" alt="3D Real-time Lighting Architecture" class="grid-gif">
+                        <video class="grid-box-video" playsinline autoplay loop muted>
+                            <source src="assets/vids/Reel_Lighting.mp4" type="video/mp4">
+                        </video>
+                        <div class="wireframe-box-overlay">
+                            <span class="wireframe-box-title">Lighting & Technical Art</span>
+                        </div>
                     </a>
                 </div>
+
             </div>
         </main>
 
@@ -65,4 +74,5 @@
         </footer>
     </div>
 </body>
+
 </html>
