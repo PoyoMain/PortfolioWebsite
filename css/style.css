@@ -802,37 +802,42 @@ pre {
     border: 2px solid var(--text-main);
     border-radius: 4px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: space-between;
     margin-bottom: 4rem;
     overflow: hidden;
 }
 
 .carousel-track-container {
-    width: 100%;
+    flex: 1;
     height: 100%;
     position: relative;
+    background-color: #070a12;
 }
 
 .carousel-slide-link {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: var(--text-main);
-    position: relative;
+    overflow: hidden;
 }
 
 .carousel-slide-link.active {
     display: block;
 }
 
-.carousel-slide-img, 
-.grid-box-img {
+.carousel-slide-video,
+.grid-box-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
     display: block;
+    pointer-events: none; 
 }
 
 .carousel-slide-overlay,
@@ -842,27 +847,26 @@ pre {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(11, 15, 25, 0.3), rgba(11, 15, 25, 0.75));
+    background: linear-gradient(to bottom, rgba(11, 15, 25, 0.25), rgba(11, 15, 25, 0.85));
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.25s ease;
+    z-index: 2;
 }
 
 .carousel-slide-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 800;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
     text-align: center;
     padding: 0 1rem;
 }
 
 .carousel-arrow {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    position: relative;
     width: 60px;
     display: flex;
     align-items: center;
@@ -871,33 +875,35 @@ pre {
     font-weight: 300;
     color: var(--text-main);
     cursor: pointer;
-    background: transparent;
-    transition: background 0.2s ease;
+    background: #0d1524;
+    transition: background 0.2s ease, color 0.2s ease;
     user-select: none;
     z-index: 10;
+    flex-shrink: 0;
 }
 
 .carousel-arrow.left {
-    left: 0;
     border-right: 2px solid var(--text-main);
 }
 
 .carousel-arrow.right {
-    right: 0;
     border-left: 2px solid var(--text-main);
 }
 
 .carousel-arrow:hover {
-    background-color: rgba(11, 15, 25, 0.6);
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
 .carousel-dots {
     position: absolute;
     bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 0.85rem;
     z-index: 10;
-    background-color: rgba(11, 15, 25, 0.6);
+    background-color: rgba(11, 15, 25, 0.75);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     backdrop-filter: blur(4px);
@@ -938,7 +944,7 @@ pre {
     position: relative;
     background-color: var(--card-bg);
     border: 2px solid var(--text-main);
-    aspect-ratio: 16 / 5;
+    aspect-ratio: 16 / 10; 
     overflow: hidden;
     text-decoration: none;
     color: var(--text-main);
@@ -952,20 +958,20 @@ pre {
 }
 
 .lighting-grid-box:hover .grid-box-overlay {
-    background-color: rgba(11, 15, 25, 0.45);
+    background: rgba(11, 15, 25, 0.45);
 }
 
 .grid-box-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    letter-spacing: -0.01em;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     text-align: center;
+    padding: 0 0.5rem;
 }
 
 @media (min-width: 768px) {
     .lighting-project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -974,7 +980,6 @@ pre {
     margin-bottom: 3.5rem;
 }
 
-/* Big Display Screen Block */
 .gallery-main-view {
     position: relative;
     width: 100%;
@@ -994,7 +999,6 @@ pre {
     display: block;
 }
 
-/* Descriptive Bottom Info Strip overlaying main frame */
 .gallery-caption-bar {
     position: absolute;
     bottom: 0;
@@ -1008,7 +1012,6 @@ pre {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Interactive Clickable Thumbnail Matrix Row */
 .gallery-thumbnail-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1030,7 +1033,7 @@ pre {
     height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0.5; /* Muted non-active thumbnails */
+    opacity: 0.5;
     transition: opacity 0.2s ease;
 }
 
@@ -1043,7 +1046,6 @@ pre {
     opacity: 0.85;
 }
 
-/* Active Highlight Thumbnail Layout Rules */
 .thumbnail-card.active {
     border-color: var(--accent-color);
     box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
@@ -1051,4 +1053,14 @@ pre {
 
 .thumbnail-card.active img {
     opacity: 1;
+}
+
+#theatre-active-media,
+.thumbnail-card img,
+.thumbnail-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
 }

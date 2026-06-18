@@ -1,23 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     const thumbnails = document.querySelectorAll('.thumbnail-card');
-    const displayTarget = document.getElementById('theatre-display-target');
+    const mainViewer = document.getElementById('gallery-main-viewer');
     const captionTarget = document.getElementById('theatre-caption-target');
 
     thumbnails.forEach(card => {
         card.addEventListener('click', () => {
-            // Drop running layout configurations from prior selection
             thumbnails.forEach(t => t.classList.remove('active'));
-
-            // Focus current element target 
             card.classList.add('active');
 
-            // Collect target data properties
-            const newImageSrc = card.getAttribute('data-large');
-            const newCaptionText = card.getAttribute('data-caption');
+            const internalMedia = card.querySelector('img, video');
+            const captionText = card.getAttribute('data-caption');
 
-            // Swap out primary view content fields
-            if (newImageSrc) displayTarget.setAttribute('src', newImageSrc);
-            if (newCaptionText) captionTarget.textContent = newCaptionText;
+            if (internalMedia) {
+                const oldMedia = document.getElementById('theatre-active-media');
+                if (oldMedia) oldMedia.remove();
+
+                const clonedMedia = internalMedia.cloneNode(true);
+                
+                clonedMedia.id = 'theatre-active-media';
+                clonedMedia.removeAttribute('hidden');
+                
+                if (clonedMedia.tagName.toLowerCase() === 'video') {
+                    clonedMedia.muted = true;
+                    clonedMedia.autoplay = true;
+                    clonedMedia.loop = true;
+                    clonedMedia.removeAttribute('pointer-events');
+                }
+
+                mainViewer.insertBefore(clonedMedia, captionTarget);
+                
+                if (clonedMedia.tagName.toLowerCase() === 'video') {
+                    clonedMedia.play().catch(e => console.log("Handled browser video gate:", e));
+                }
+            }
+
+            if (captionText) captionTarget.textContent = captionText;
         });
     });
 });
