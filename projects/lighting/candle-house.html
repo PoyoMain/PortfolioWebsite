@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Project</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html">Games</a>
+                <a href="../../lighting.html" class="active">Back To Lighting Works</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <header class="wireframe-case-header">
+            <h1>Candle House</h1>
+            <p class="wireframe-intro-p">In Fall 2024, I took on the challege of trying to light a house environment
+                solely by candle light. I kitbashed all of the assets within the house and used Unreal Engine's
+                cube grid to build the house and its layout.
+            </p>
+        </header>
+
+        <section class="project-meta-grid">
+            <div class="meta-block">
+                <h4>Role</h4>
+                <p>Lighting/Level Design</p>
+            </div>
+            <div class="meta-block">
+                <h4>Engine / Tool</h4>
+                <p>Unreal Engine 5</p>
+            </div>
+            <div class="meta-block">
+                <h4>Render Pipeline</h4>
+                <p>Lumen</p>
+            </div>
+            <div class="meta-block">
+                <h4>Timeline</h4>
+                <p>1 Week</p>
+            </div>
+        </section>
+
+        <section class="gallery-theatre-section">
+            <div class="gallery-main-view" id="gallery-main-viewer">
+                <img src="../../assets/images/lighting/CandleHouse1.png" id="theatre-active-media"
+                    alt="Main Showcase Display">
+                <div class="gallery-caption-bar" id="theatre-caption-target">Cinematic Render 1</div>
+            </div>
+
+            <div class="gallery-thumbnail-strip">
+                <div class="thumbnail-card active" data-caption="Cinematic Render 1">
+                    <img src="../../assets/images/lighting/CandleHouse1.png" alt="Static Rendering 1">
+                </div>
+
+                <div class="thumbnail-card active" data-caption="Cinematic Render 2">
+                    <img src="../../assets/images/lighting/CandleHouse2.png" alt="Static Rendering 2">
+                </div>
+
+                <div class="thumbnail-card active" data-caption="Cinematic Render 3">
+                    <img src="../../assets/images/lighting/CandleHouse3.png" alt="Static Rendering 3">
+                </div>
+
+                <div class="thumbnail-card active" data-caption="Cinematic Render 4">
+                    <img src="../../assets/images/lighting/CandleHouse4.png" alt="Static Rendering 4">
+                </div>
+
+                <div class="thumbnail-card active" data-caption="Cinematic Render 5">
+                    <img src="../../assets/images/lighting/CandleHouse5.png" alt="Static Rendering 5">
+                </div>
+
+                <div class="thumbnail-card active" data-caption="Cinematic Render 6">
+                    <img src="../../assets/images/lighting/CandleHouse6.png" alt="Static Rendering 6">
+                </div>
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <div class="case-study-box">
+                <h3>Technical Implementation</h3>
+                <p>For this project, I wanted to keep the lighting as realistic as possible so I chose Unreal Engine to
+                    do it in due to its realistic rendering and lumen reflections system. I made a blueprint of a candle
+                    with
+                    a light on it so it can be reused throughout the level easily and then used the foliage tool to
+                    place candles
+                    in the house, going back and adjusting the positions and amount manually to improve quality. In
+                    addition to the
+                    candle lights, there are also faint point lights in the scene supporting the candles in areas they
+                    don't reach
+                    well.
+                </p>
+                <br>
+                <ul>
+                    <li>Different Lighting Types</li>
+                    <li>Optimized Shadows</li>
+                    <li>High-Definition Rendering</li>
+                </ul>
+            </div>
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../lighting.html" class="bubble-games-btn">&larr; Back to Lighting Works</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+
+    </div>
+
+    <script src="../../js/project-gallery.js"></script>
+</body>
+
+</html>
