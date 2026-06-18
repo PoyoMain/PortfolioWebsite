@@ -100,16 +100,20 @@ nav {
 }
 
 .hero-profile-box {
-    width: 180px;
-    height: 180px;
+    max-width: 280px;
+    width: 100%;
+    height: auto;
     border: 3px solid var(--text-main);
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    display: block;
     flex-shrink: 0;
+    overflow: hidden;  
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .homepage-about-section {
