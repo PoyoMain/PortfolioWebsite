@@ -1215,3 +1215,10 @@ pre {
         grid-template-columns: 1fr;
     }
 }
+
+.social-svg-icon {
+    width: 32px;
+    height: 32px;
+    stroke: var(--text-muted);
+    transition: stroke 0.2s ease, fill 0.2s ease;
+}
