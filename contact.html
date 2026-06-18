@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Chris Calbert</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="games.html">Games</a>
+                <a href="lighting.html">Lighting Work</a>
+                <a href="contact.html" class="active">Contact Me</a>
+            </div>
+        </nav>
+
+        <header class="wireframe-case-header">
+            <h1>Get In Touch</h1>
+            <p class="wireframe-intro-p">Let's build something awesome together. If you want to contact me about anything, please use the form below.</p>
+        </header>
+
+        <main class="contact-form-container">
+            <form action="https://formspree.io/f/xrevwowv" method="POST">
+                
+                <div class="form-field">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project Opportunity / Pipeline Inquiry">
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell me about your project pipeline parameters..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary contact-submit-btn">Send Message &rarr;</button>
+            </form>
+
+            <div class="contact-socials-section">
+                <h3>Find Me Online</h3>
+                <div class="social-links-grid">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link-card">
+                        <span class="social-icon">💼</span>
+                        <span class="social-name">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="social-link-card">
+                        <span class="social-icon">💻</span>
+                        <span class="social-name">GitHub</span>
+                    </a>
+                    <a href="https://artstation.com" target="_blank" rel="noopener" class="social-link-card">
+                        <span class="social-icon">🎨</span>
+                        <span class="social-name">ArtStation</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Standard Footer -->
+        <footer>
+            <a href="index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <span class="footer-text-muted">&copy; 2026 Chris Calbert. All rights reserved.</span>
+        </footer>
+    </div>
+</body>
+</html>
