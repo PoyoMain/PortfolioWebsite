@@ -832,6 +832,7 @@ pre {
 }
 
 .carousel-slide-video,
+.carousel-slide-image,
 .grid-box-image,
 .grid-box-video {
     width: 100%;
@@ -1029,7 +1030,8 @@ pre {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.thumbnail-card img {
+.thumbnail-card img,
+.thumbnail-card video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1043,7 +1045,8 @@ pre {
     border-color: var(--text-muted);
 }
 
-.thumbnail-card:hover img {
+.thumbnail-card:hover img,
+.thumbnail-card:hover video  {
     opacity: 0.85;
 }
 
@@ -1052,7 +1055,8 @@ pre {
     box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
 }
 
-.thumbnail-card.active img {
+.thumbnail-card.active img,
+.thumbnail-card.active video  {
     opacity: 1;
 }
 

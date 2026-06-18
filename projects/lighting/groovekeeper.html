@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovekeeper</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="../../index.html" class="nav-home-icon" title="Home">🏠</a>
+            <div class="nav-links">
+                <a href="../../games.html">Games</a>
+                <a href="../../lighting.html" class="active">Back To Lighting Works</a>
+                <a href="../../contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <header class="wireframe-case-header">
+            <h1>Groovekeeper</h1>
+            <p class="wireframe-intro-p">In Spring 2026, I led development for Groovekeeper, a boss-battle
+                rhythm game. I was the head programmer and was the technical artist for a lot of the shader
+                effects found in the game.
+            </p>
+        </header>
+
+        <section class="project-meta-grid">
+            <div class="meta-block">
+                <h4>Role</h4>
+                <p>Technical Artist</p>
+            </div>
+            <div class="meta-block">
+                <h4>Engine / Tool</h4>
+                <p>Unity</p>
+            </div>
+            <div class="meta-block">
+                <h4>Render Pipeline</h4>
+                <p>Universal Render Pipeline</p>
+            </div>
+            <div class="meta-block">
+                <h4>Timeline</h4>
+                <p>3 months</p>
+            </div>
+        </section>
+
+        <section class="gallery-theatre-section">
+            <div class="gallery-main-view" id="gallery-main-viewer">
+                <video id="theatre-active-media" playsinline autoplay loop muted>
+                    <source src="../../assets/vids/Groovekeeper_ScreenTransition1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-caption-bar" id="theatre-caption-target">Screen transition from the song select menu
+                    to main gameplay</div>
+            </div>
+
+            <div class="gallery-thumbnail-strip">
+                <div class="thumbnail-card active"
+                    data-caption="Screen transition from the song select menu to main gameplay">
+                    <video playsinline autoplay loop muted>
+                        <source src="../../assets/vids/Groovekeeper_ScreenTransition1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="thumbnail-card" data-caption="Screen transition from the main menu to song select menu">
+                    <video playsinline autoplay loop muted>
+                        <source src="../../assets/vids/Groovekeeper_ScreenTransition2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="thumbnail-card" data-caption="Screen transition shader graph">
+                    <img src="../../assets/images/lighting/Groovekeeper_ScreenTransitionGraph.png"
+                        alt="Screen Transition Shader Graph">
+                </div>
+
+                <div class="thumbnail-card" data-caption="Song select menu's pattern scroll background">
+                    <video playsinline autoplay loop muted>
+                        <source src="../../assets/vids/Groovekeeper_SongSelect.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="thumbnail-card" data-caption="Rush mode activation">
+                    <video playsinline autoplay loop muted>
+                        <source src="../../assets/vids/Groovekeeper_RushMode.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="thumbnail-card" data-caption="Rush mode shader graph">
+                    <img src="../../assets/images/lighting/Groovekeeper_RushModeGraph.png" alt="Rush Mode Shader Graph">
+                </div>
+
+                <div class="thumbnail-card" data-caption="Rush and boss meter animations">
+                    <video playsinline autoplay loop muted>
+                        <source src="../../assets/vids/Groovekeeper_RushBossMeters.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </section>
+
+        <main class="wireframe-sections">
+            <div class="case-study-box">
+                <h3>Project Description</h3>
+                <p>For Groovekeeper, I wanted to make the visuals really stand out for its hyperpop artstyle.
+                    For that, I added a lot of different visual effects using Unity's Shader Graph. I have screen
+                    transitions that provide a way to disguise the additive scene loading happening behind the scenes,
+                    while providing the players with a clean visual. A lot of menus have a scrolling pattern background
+                    to keep the menus feeling dynamic and pretty. To enhance gameplay, there are shaders on both meter's
+                    found in the main gameplay to indicate progress as well as a full canvas shader that activates
+                    whenever
+                    the player activates rush mode.
+                </p>
+                <br>
+                <ul>
+                    <li>Visual UI Polish</li>
+                    <li>URP Shader Graph</li>
+                    <li>Particle System</li>
+                </ul>
+            </div>
+        </main>
+
+        <div class="back-games-ribbon-block">
+            <a href="../../lighting.html" class="bubble-games-btn">&larr; Back to Lighting Works</a>
+        </div>
+
+        <footer>
+            <a href="../../index.html" class="footer-home-link" title="Back to Home Dashboard">🏠</a>
+            <a href="../../contact.html" class="footer-contact-link">Contact me &rarr;</a>
+        </footer>
+
+    </div>
+
+    <script src="../../js/project-gallery.js"></script>
+</body>
+
+</html>
