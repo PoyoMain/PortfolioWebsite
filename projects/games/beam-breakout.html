@@ -57,12 +57,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Light Reflection Mechanic</h3>
-                    <p>To make the base reflection mechanic of the game, I have a script for reflective objects
-                        that makes it so when hit by a beam, they shoot out another beam in their forward direction.
-                        Being hit by two or more beams at the same time, upgrades the beam that is shot out to the next
-                        level of the lowest level beam that it is being hit with. So if being hit with a level 2 and level
-                        1 beam, a level 2 beam will be shot out, but if being hit with both level 2's, a level 3 beam will
-                        be shot out.
+                    <p>To implement the core reflection mechanic, I wrote a script for reflective objects that fires a 
+                        new beam in their forward direction whenever they are hit by light. When an object is struck by 
+                        two or more beams simultaneously, the system upgrades the output beam's intensity based on the incoming 
+                        levels. For example, combining a level 2 beam and a level 1 beam outputs a level 2 beam, while combining 
+                        two level 2 beams upgrades the output to a level 3 beam.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -78,11 +77,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Puzzle Design</h3>
-                    <p>I was also in charge of designing/implementing the game's puzzles. I would create puzzles using
-                        external drawing software and send them to the other members to see overall reactions to the
-                        puzzle, including how easy or hard it was, which parts they got stuck on, and if they solved
-                        it using an unintended solution. After finalizing the puzzle design, I would implement it into
-                        Unity and set it up to be played.
+                    <p>I was responsible for designing and implementing the game's puzzles. I initially mocked up the layouts 
+                        using external drawing software and shared them with team members to gather feedback on difficulty, 
+                        parts they got stuck on, and any unintended solutions. Once the layouts were fully vetted and finalized,
+                        I moved them into Unity to build and set up the levels for gameplay.
                     </p>
                 </div>
                 <div class="row-media-box">

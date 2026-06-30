@@ -58,14 +58,12 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Turn-Based Battle System</h3>
-                    <p>For the battle system, I use a state machine to manage the different battle states of each
-                        character on the field. First organizing everyone by their speed stat, and then giving the player and
-                        enemies their own unique states since the player needs to choose an attack or item to use.
-                        Each attack the player has has a scriptable object associated with it that holds the attack
-                        type (melee or magic) as well as the difficulty of the attack. It will spawn it a minigame
-                        corresponding with the attack type and the player will then have to draw on the screen to
-                        perform the minigame, dealing damage based on how well they did. This turn system repeats until
-                        either the player or all the enemies have been defeated.
+                    <p>For the battle system, I use a state machine to manage the distinct combat states of each 
+                        character on the field. The system sorts characters by their speed stat, handling unique 
+                        states for players and enemies to manage actions like attacking or using items. Each attack 
+                        is tied to a Scriptable Object storing the type (melee or magic) and difficulty. This data 
+                        spawns a corresponding drawing minigame where damage is determined by the player's accuracy, 
+                        repeating the loop until one side is defeated.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -81,10 +79,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Sword Attack Minigame</h3>
-                    <p>For the melee minigame, the player has to trace the screen, moving their mouse towards a dot icon.
-                        When they reach the dot another will spawn. This will continue until the minigame is complete (a set
-                        amount of dots have been hit), the timer runs out, or the player releases the mouse button. For visual
-                        polish, a trail is drawn after the mouse as well representing a sword swing.
+                    <p>For the melee minigame, players trace a path across the screen by moving their mouse toward 
+                        a target dot icon, which dynamically spawns a new target upon completion. The minigame concludes 
+                        once a set number of dots are hit, the timer expires, or the player releases the mouse button. 
+                        For visual polish, a dynamic trail renderer tracks the mouse movement to visually simulate a sword swing.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -100,10 +98,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Cutscene Player</h3>
-                    <p>For the game's opening cutscene, I use Unity's Timeline to organize all the voice lines, splash art
-                        and dialogue into one scene. I created a system that pauses the cutscene after a set shot is finished,
-                        having it so the player can click to continue, so they can get a chance to look at the art or re-read
-                        dialogue. The player can also choose to skip the cutscene entirely, moving on to the main gameplay.
+                    <p>For the game's opening cutscene, I use Unity Timeline to sequence voice lines, splash art, 
+                        and dialogue into one scene. I built a control system that pauses the timeline at the 
+                        end of each shot, allowing players to click through at their own pace to see the art and narrative. 
+                        Additionally, a skip function is integrated to let players skip the sequence and jump straight 
+                        into gameplay.
                     </p>
                 </div>
                 <div class="row-media-box">

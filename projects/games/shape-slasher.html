@@ -58,16 +58,12 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Map Generation</h3>
-                    <p>In order to make each run feel different and unique, I created a two-pass
-                        procedural generation algorithm that separates dungeon layout from room
-                        placement. It first uses a random-walk strategy with constraint checks
-                        to build a cohesive grid layout of standard rooms, backtracking whenever
-                        it hits a dead end. Once a layout is made, a second pass analyzes the map
-                        to swap specific standard rooms with key focal points like boss, shop,
-                        and challenge rooms. The number of total rooms and focal points
-                        can be adjusted as well. Given the limited time frame, rather than generating
-                        each room, the game uses prebuilt rooms and places a number of them during
-                        the map building process.
+                    <p>To make each run feels distinct, I created a two-pass procedural generation algorithm that 
+                        separates dungeon layouts from specific room placement. The first pass uses a random-walk 
+                        strategy with constraint checks to build the grid arrangement, using backtracking loops 
+                        to handle dead ends. The second pass looks over the layout to swap standard rooms with focal points 
+                        like boss, shop, and challenge rooms. To maximize efficiency given the tight scope, the algorithm selects 
+                        from a pool of pre-built rooms and places them after a layout is decided.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -83,13 +79,11 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Combat System</h3>
-                    <p>For combat, I implemented a system which uses 2D box colliders to indicate
-                        both hitboxes and hurtboxes. I wanted to separate this from the player or
-                        any particular enemy so objects/hazards in the scene could utilize these
-                        to deal or take damage. For the player and enemys I sync the hitboxes to
-                        their attack visuals via the in-engine animator. This way the level designers
-                        can easily manipulate where these hitboxes are as well as other values like
-                        damage and knockback.
+                    <p>For combat, I implemented a system which uses 2D box colliders to 
+                        handle separate hitbox and hurtbox logic. Decoupling this from the player
+                        or specific enemy components let me have environmnetal hazarcs that interact with
+                        damage events as well. I synced combat colliders with attack animations using Unity's
+                        Animation system, exposing damage and knockback variables to give designers more control.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -105,14 +99,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Enemy AI</h3>
-                    <p>All enemies, including the boss, use a state machine combined with triggers and
-                        semi-frequent raycasts to move around and attack. If the player is not within
-                        one of their detection triggers, they will move around idly, using raycasts to
-                        avoid walls/ledges. If the player is in the detection trigger, and a raycast from
-                        the enemy to the player hits, then depending on factors like the player's relative
-                        location, which attacks the enemy has done previously, and if the enemy was just
-                        recently attacked, enemies have set moves they can do. This way they feel more alive,
-                        reacting to the player's actions.
+                    <p>All enemies, including the boss, use a state machine combined with trigger boxes and
+                        periodic raycasts. Enemies navigate idly and send collision-avoiding raycast along ledges
+                        and walls when the player is outside the detection threshold. When a target enters the trigger's
+                        bounds and a line-of-sight raycast hits, depending on contextual factors like the target's
+                        location, attack cooldowns, and if they were recently attacked to determine their moves.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -128,15 +119,11 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Credits/Concept Art Menu</h3>
-                    <p>For Shape Slasher, I wanted a menu that held all the concept art not shown off
-                        in the main gameplay portion of the game, so everyone's work can be properly
-                        shown off. I passed the idea onto the team's UI artist/designer and they came
-                        up with the idea for half/half menu with credits on one side and a scrolling
-                        concept art menu on the other side. The concept art menu was a bit difficult
-                        to implement due to the shape and alignment of the buttons, but I made a script
-                        to control navigation input and automatically scroll the menu depending on which
-                        button was highlighted, making sure the scrolling stops when the top or bottom
-                        is reached.  
+                    <p>To show off team contributions, I wanted to showcase unused concept art assets in
+                        its own menu. I collaborated with our UI artist on a split-screen layour showing credits with
+                        an interactive gallery. To handle the unconventional asset alignment and sizing, I programmed a 
+                        scroll rect controll script that takes menu navigation inputs and automatically centers the selected
+                        concept art button while not using the scroll rect's bounds to not go off-screen.
                     </p>
                 </div>
                 <div class="row-media-box">

@@ -56,14 +56,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Crafting System</h3>
-                    <p>In Abyssal Eats, I use scriptable objects to hold the different card types, ingredients and
-                        dishes and I use one to hold the different recipes as well. When a player places a card in
-                        one of the slots, an event is sent to the crafting manager and the crafting manager converts
-                        the names of all the cards in the slots into a string and uses it as a key to search through
-                        a list of recipes to find one that uses the same ingredients as what its played on the grid.
-                        This method handles order as well, so cards can be played in any order and would still work.
-                        If a recipe is found, it discards the cards used and spawns in the final result card and places it
-                        in the player's hand.
+                    <p>In Abyssal Eats, I use Scriptable Objects to store card types, ingredients, dishes, and recipes. 
+                        When a player plays cards into slots, an event triggers the crafting manager to combine the slot item names 
+                        into a single string key. It then searches a list of recipes for a matching key, handling cards in any order. 
+                        If a match is found, the system discards the ingredients, instantiates the final dish card, and adds it back 
+                        into the player's hand.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -79,10 +76,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Card Movement/Placement</h3>
-                    <p>For card movement, I use the IPointer and IDrag interfaces to register the mouse hovering and moving
-                        the cards. When the card has been placed, it sends out a raycast to make sure it's over a slot can
-                        go into, and if it is, it'll change it's parent to be that card slot and reset it's position. Otherwise,
-                        it will lerp back to it's position within the player's hand. 
+                    <p>For card movement, I use Unity's IPointer and IDrag interfaces to track mouse hovering and handling. 
+                        When released, the card fires a raycast to detect if there are valid card slots below. If it finds one, the system 
+                        updates the card's parent transform to the slot and snaps its position. If it doesn't find one, the card smoothly 
+                        lerps back to its original position within the player's hand.
                     </p>
                 </div>
                 <div class="row-media-box">

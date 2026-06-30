@@ -61,11 +61,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Song Select Menu</h3>
-                    <p>I wanted Groovekeeper's song select menu to be very (word for visually
-                        pleasing animation-wise) so using the drawn assets that our UI artists
-                        provided, I implemented a carousel system for the song select menu. This way
-                        players can navigate through different songs quickly and then can see the information
-                        of the song, by clicking on the middle-most selected song button.
+                    <p>I wanted Groovekeeper's song select menu to be very dynamic and fluid. Using 
+                        the custom assets provided by our UI artists, I implemented a carousel selection system.
+                        This allows players to rapidly navigate through available tracks and bring up dedicated
+                        song metadata, difficulty charts, and track details simply by selecting the central, active
+                        song slot.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -82,11 +82,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Beatmap System</h3>
-                    <p>I initially planned to use MIDI files to write Groovekeeper's beatmaps, however,
-                        Unity natively cannot read MIDI files so I had to come up with another solution. I then
-                        learned MIDI files can be easily converted to BYTES files. Using that knowledge, I wrote
-                        a script that parses bytes files and reads data such as the note's SPN and length,
-                        which determines factors like which lane the note is in, if its a double or hold note, and more.
+                    <p>While I initially planned to use MIDI files to write Groovekeeper's rhythm charts,
+                        Unity natively cannot parse MIDI files. To get around this, I converted the files
+                        into standard BYTES data. I then set up a custom parser script to read the raw bytes and
+                        read data like pitch notation (SPN) and duration to map note lanes, double notes, and hold notes.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -102,13 +101,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Music Sync</h3>
-                    <p>One of the most important elements of rhythm games to me is that the actions are synced
-                        to the music that is being played, so I wanted to make sure Groovekeeper didn't have any
-                        issues with that. I created a system that starts the spawning of notes and the music
-                        simultaneously, including parameters so the other team members that were implementing
-                        new songs could adjust the start delay of the music/notes, the speed in which notes move
-                        across the screen, add beatmaps for different difficulties, and more. This sped up our
-                        implementation speed a lot.
+                    <p>A perfect audio-visual sync is critical for a rhythm game, so I make an audio engine to prevent any
+                        visual latency. The system starts note scrolling and audio playback concurrently, providing inspector
+                        variables so designers can configure offset delays, custom note speeds, and difficulty data. This system
+                        significantly sped up the team's level implementation process.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -124,14 +120,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Boss Battle</h3>
-                    <p>With a desire to add a more intense bout with the boss of a song, I discussed with my team
-                        and we decided a boss battle portion to the game. I was in charge of programming the UI as well as
-                        the system that this mode runs on. The system uses the same music playing script as the main gameplay,
-                        but instead of parsing a beatmap at the beginning, each boss has a set of attacks they can do
-                        the beat. Each attack is a struct that holds the move type, and the beats from when the attack
-                        starts that the attack is done on. The system will send a message saying the boss should start
-                        its attack and then the boss will animate to perform the set of attacks in sync with the song's
-                        bpm.
+                    <p>To increase gameplay stakes, I worked with my team to design a boss battle mode. I programmed
+                        the backend logic and the user interface for this mode, using the core audio tracker to sync actions.
+                        Instead of reading a rhythm chart, bosses cycle through attacks structured as custom structs, containing
+                        move types and beat timings. Boss animations are triggered in rhythm with the tracks BPM as well.
                     </p>
                 </div>
                 <div class="row-media-box">

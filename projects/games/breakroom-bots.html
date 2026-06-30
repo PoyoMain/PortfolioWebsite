@@ -59,11 +59,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Lobby System</h3>
-                    <p> Using Unity's Relay system, I set up a lobby system in which players can either create
-                        their own lobby or join someone else's lobby. You have the option to make a lobby public
-                        or private. If public, it will be displayed on other player's lobby screens, but if private
-                        players have the option to join via a generated lobby code as well. Players also have the option
-                        to change their display name.
+                    <p> Using Unity's Relay and Lobby systems, I set up a matchmaking network where players can create or 
+                        join game sessions. Lobbies can be public or private; public lobbies populate a shared lobby list,
+                        while private sessions generate a unique lobby code that other players can join with. I also
+                        set up a custom input field that allows players to update their display names locally.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -79,9 +78,9 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Networking Gameplay</h3>
-                    <p> Also using Unity's Relay service, I send data from one system to another via Unity's provided
-                        server. Trying to keep the data that is transfered simple, I use mainly ints to communicate
-                        which cards the other player has dealt/played. I also set up a lobby system where players can 
+                    <p> Also using Unity's Relay service, I sync real-time data across clients through remote host servers.
+                        To optimize bandwidth and keep performance high, I serialize data down to simple integer values to
+                        communicate game events like tracking which cards a player has been dealt or played. 
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -97,10 +96,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Card Conditions and Effects</h3>
-                    <p>Each card in Breakroom Bots has an effect with some having conditions to activate them
-                        and others whose effects would happen if the condition wasn't satified. I was responsible for 
-                        programming a system that allowed for cards to be easily implemented, which included the name,
-                        splash art, conditions, and the effects that pair with them. 
+                    <p>Cards in Breakroom Bots have distinct effects that trigger depending on whether specific conditions 
+                        are met. I made an data system to simplify the process of adding cards, allowing designers to easily 
+                        implement new cards by setting their name, splash art assets, conditional logic, and associated effects
+                        in the inspector.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -116,9 +115,9 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Main Menu Animations</h3>
-                    <p>I wanted the main menu to have menus spread across the breakroom, so I used a combination
-                        of the Cinemachine plugin and Unity's UGUI system to have world-space UI and a virtual
-                        cameras that blend between one another to frame each of the menus.
+                    <p>To make an immersive main menu spread across the game's breakroom setting, I used the 
+                        Cinemachine plugin alongside Unity's UGUI system. I designed the submenus as world-space UI layouts 
+                        and set up virtual cameras to blend and transition between viewpoints depending on the active menu.
                     </p>
                 </div>
                 <div class="row-media-box">

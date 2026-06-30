@@ -76,12 +76,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Enemy AI</h3>
-                    <p>The Enemy AI in Scorched Tide is very simple in the fact that they constantly move towards the
-                        player, stopping right before them, and then attacking at a set rate. The hardest part was that,
-                        due to the non-flat nature of the map, a navigation mesh had to be used for the enemies to navigate
-                        it without getting stuck behind objects. Each enemy has a nav agent that reads the data from the
-                        generated nav mesh to move around objects. I marked certain objects like big rocks or the player's
-                        tool and ship as nav obstacles so enemies would move around them.
+                    <p>The enemies constantly track and advance toward the player, stopping when they get close to attack 
+                        at a fixed rate. To handle navigation across uneven terrain, I used Godot's NavigationMesh system. 
+                        Each enemy use a NavigationAgent3D node to calculate the path to the player. I made large rocks,
+                        interactive tools, and the main ship as NavigationObstacle3D objects to refine the pathfinding
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -97,11 +95,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Tool Mechanics</h3>
-                    <p>The player has two tools available to them. A gun and turrets around the map. The gun and turrets, both
-                        fire bullets, so I use the same class to spawn the projectile while different classes managed them for
-                        both tools, one being manual and the other, automatic. The turret uses an Area node and a set layer set-up
-                        to detect enemies around it. If an enemy is in range and the turret has fuel, it will rotate its head
-                        towards the enemy and fire.
+                    <p>Players defend themselves using a blaster and automated turrets. Since both systems share the
+                        same projectile logic, I use a class solely to instantiate the bullets while putting the control logic
+                        into manual and automatic tracking classes. The turret uses an Area3D node with collision layers to scan
+                        for enemies. If an enemy enters the radues and the turret has fuel it rotates to shoot the enemy.
                     </p>
                 </div>
                 <div class="row-media-box">

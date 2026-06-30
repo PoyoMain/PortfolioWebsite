@@ -59,14 +59,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Multiplayer Initialization</h3>
-                    <p>In order to get both players initialized. I used Unity's Player Input Manager
-                        component to spawn prefabs that have each have a custom PlayerConfig class that
-                        holds the PlayerInput component, the ScriptableObject of the selected character,
-                        and the player index. I use a custom ConfigManager class set to DontDestroyOnLoad
-                        to store the configs. When the game starts, it spawns each players character prefab
-                        it its set location and initializes the different components on the prefab that need
-                        a reference to variables in the config class or to subscribe to the controls' events
-                        on the PlayerInput component.
+                    <p>To set up local multiplayer, I used Unity's Player Input Manager component to spawn 
+                        prefabs containing a custom configuration class. This class caches the active PlayerInput component, 
+                        the designated character Scriptable Object, and the user's index within a manager marked with 
+                        DontDestroyOnLoad. When a match starts, the system spawns character models at designated spawn 
+                        points and links the internal variables directly to control events on the PlayerInput component.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -101,13 +98,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Main Menu & Character Select</h3>
-                    <p>For the main menu and character select, I tried using an additive scene loading
-                        approach. Since the main menu and character select share the same backdrop, and
-                        that back drop needs to listen for an event run on the character select to start
-                        animating, I have the backdrop in its own scene that persists when going from main
-                        menu to character select or vice versa. I also set up a system in which the players
-                        can see whether they're player 1 or 2 and the respective controller type they're using,
-                        using this information to initialize the character select as well
+                    <p>For the beginning menus, I implemented an additive scene loading system to preserve
+                        the shared environment backdrop across menu transitions. The background environment
+                        listens for character-selection events to trigger its animation. The system also,
+                        auto-detects connected hardware, showing the player designations with the input device type,
+                        using this info to dynamically initialize the character select screen.
                     </p>
                 </div>
                 <div class="row-media-box">

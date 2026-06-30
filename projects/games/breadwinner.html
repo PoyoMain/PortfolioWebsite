@@ -56,11 +56,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Pause Menu</h3>
-                    <p>For Breadwinner's pause menu, I implemented the design of navigating through a phone screen. I implemented
-                        all the art in engine and added animations for the menu opening and closing. I used the animator component
-                        to animate the phone screen's screen transitions between different submenus and animated icons growing and
-                        shrinking on click via code. I added a menu to adjust the game's different settings, and to view the different
-                        collectables the player had collected throughout their playthrough.
+                    <p>For Breadwinner's pause menu, I implemented a design around navigating a smartphone screen. I implemented
+                        all the art in engine and added animations for the menu opening and closing. Using the Animator component, 
+                        I managed the smooth screen transitions between various submenus, while handling dynamic button scaling
+                        on-click via code. I also built dedicated submenus for adjusting game settings and tracking the
+                        player's unlocked collectibles.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -76,11 +76,11 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Results Screen</h3>
-                    <p>For the results screen there are a lot of stats that are being kept track of, like the number of money gained
-                        in a run, the number of hearts lost, and the number of enemies defeated. I was tasked with creating a menu that
-                        counted up those values in order as well as displaying a total letter ranking at the end. Using coroutines, I
-                        made a sequence that did this as well as adding skip functionality so player's can get back to gameplay quickly
-                        if they choose to do so.
+                    <p>For the results screen tracks stats like money earned, health lost, and total enemies defeated. I was responsible 
+                        for creating a menu that counts up these values sequentially before displaying a final letter ranking
+                        counted up those values in order as well as displaying a total letter ranking at the end. Using coroutines,
+                        I built a timed sequence to animate the tallying process and skip functionality to allow players to quickly
+                        get back to gameplay.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -96,12 +96,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Comic Viewer</h3>
-                    <p>In Breadwinner, you can unlock a viewable comic by fully completing the game. I was in charge of the functionality
-                        of unlocking this comic as well as the page viewer allowing you to read it. I created an event that runs after all
-                        collectables are collected and upon trying to access the comic, does a check to see if all collectables have been
-                        collected. If they have, the player will be allowed to press the comic view button and see the comic. For the page
-                        viewer I subscribed events to navigate the pages to the navigate input action in the controls, so the players can
-                        read the comic playing with either keyboard or controller.
+                    <p>In Breadwinner, players unlock a readable comic by getting 100% completion. I implemented the logic of unlocking
+                        this comic along with the page viewer system. The system uses an event listener to check the collectible 
+                        count; if the condition is met, the UI unlocks the viewer button. For the navigation system, I bound the page 
+                        turning actions directly to Unity's Input System navigation events, making it work for both keyboard and controller.
                     </p>
                 </div>
                 <div class="row-media-box">

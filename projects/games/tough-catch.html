@@ -59,11 +59,11 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Scriptable Object Event System</h3>
-                    <p>For Tough Catch, I wanted to test out implementing an event system using ScriptableObjects to communicate
-                        events across different areas of the game. Each minigame has a scriptable object event variable that they
-                        subscribe to to listen for when to start and they broadcast an event through a scriptable object to let other
-                        scripts know they've ended. I also use this system for taking damage, letting other scripts know the fish you
-                        caught, and other aspects of the game as well.
+                    <p>For Tough Catch, I implemented an system using Scriptable Objects to handle decoupled event communication 
+                        across separate game systems. Each minigame subscribes to an asset-based event channel to listen 
+                        for when they should start and broadcasts a completion event back through a Scriptable Object when it concludes. 
+                        I expanded this event framework to manage player damage logic, track captured fish data, and 
+                        broadcast state changes.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -86,6 +86,12 @@
                         minigame is designed and has the components necessary for it to start, run, and end, it can
                         be added to this phase, or any phase in the game, and will play as normal. This way it's modular
                         and was easy to add more minigames when ideas came up for new ones.
+
+                        The minigames in this phase happen quickly, with up to two challenges happening simultaneously on screen. 
+                        To manage this loop, I made state machine that shuffles active challenges and sends them 
+                        procedurally to the player. Each minigame inherits from an abstract base class handling the base execution 
+                        behavior, making a modular system that lets the minigame designers put in new gameplay ideas into any
+                        phase.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -101,11 +107,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Star System</h3>
-                    <p>To add a bit of replayability to the game, I added a star system that rewards the player with
-                        stars depending on how they play the game. They are awarded for different aspects of the game
-                        like catching the boss of the lake, completing the game on hard mode, and so on. I created an
-                        overall manager singleton for stars that is called on when a condition to earn one is completed.
-                        Then the results screen reads the data from this manager to display the correct amount of stars
+                    <p>To add replayability, I added a milestone system that rewards players with stars based on performance, 
+                        such as catching the lake boss or beating the game on hard. Completion states are monitored by a 
+                        manager singleton that updates when a challenge condition is completed. The results screen checks with 
+                        this manager at runtime to display the correct amount of stars.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -121,9 +126,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Main Menu UI</h3>
-                    <p>Really wanting moving UI for the main menu, I used Cinemachine to have the camera move to different parts
-                        of the environment for different menus/submenus and used the animator to animate the different UGUI
-                        elements on screen to add more game feel.
+                    <p>To have dynamic motion within the main menu, I used Cinemachine virtual cameras to transition seamlessly 
+                        between environmental points of interest as the player navigates the submenus. I combined this
+                        with Unity's built-in Animator to trigger keyframe animations for the UGUI layout, 
+                        elevating the overall game feel.
                     </p>
                 </div>
                 <div class="row-media-box">

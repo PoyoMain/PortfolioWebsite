@@ -57,13 +57,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Player Parrying</h3>
-                    <p>The player character in Operation Germ can fire two different types
-                        of ammo, and parry enemy ammo to gain their own copy. I have each move enemies can do
-                        have a collider which can be parried by the player. On parry, depending on which
-                        slot the player is parrying towards they will store their own copy of the move into
-                        that slot, and can fire it out. Each move has a scriptable object to store data about
-                        both the enemies' and player's version of the attack and that data is transfered upon
-                        parry.
+                    <p>The player character in Operation Germ can fire two ammo types or parry enemy attacks to steal copies 
+                        of them. Every enemy move has a custom collider designated for parries; after successful parrying, 
+                        the system assigns a duplicate of that ability to the player's active target slot for immediate use. Each 
+                        projectile behavior is stored in a Scriptable Object containing data for both boss and player variations.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -79,10 +76,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Enemy AI</h3>
-                    <p>Each boss enemy in Operation Germ uses a state machine that juggles which attacks they do
-                        based on previous attacks and what the player has done. The bosses all share a parent class
-                        that handle a lot of the state behavior to keep unique mechanics in the bosses' child classes,
-                        making it easier for me and the other programmer on the team to implement bosses.
+                    <p>Boss encounters in Operation Germ use by a state machine that dynamically changes attack routines 
+                        based on past moves and player actions. To keep the workflow clean, I made a modular base boss class that 
+                        handles the state system. This let me and the other team programmer put unique boss mechanics in child
+                        classes, making development easier.
                     </p>
                 </div>
                 <div class="row-media-box">

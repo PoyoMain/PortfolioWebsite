@@ -57,12 +57,10 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Player Movement</h3>
-                    <p>Implementing player movement was a bit tricky due to the fixed camera and diagonal
-                        view of the map. I ultimately decided on making the movement orthogonal based on 
-                        the camera's view of the level rather than having it be diagonal after playtesting
-                        made it clear it was easier for players. The player has a capsule collider with
-                        a rigidbody and force is applied based on which movement keys the player is holding.
-                        Jumping is done by adding force upwards to the player.
+                    <p>Implementing player movement had some challenges due to the fixed, diagonal isometric camera angle. 
+                        After getting feedback from playtesting, I chose to make player movement relative to the orthogonal
+                        camera, to ensure intuitive controls. The player character use a Capsule Collider and a Rigidbody component, 
+                        with directional forces applied based on the active input keys, and vertical force for jumping.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -78,10 +76,10 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Object Behavior</h3>
-                    <p>I was responsible for coding the different behavior for a lot of the objects in the game.
-                        The trampoline applies a force when a rigidbody comes in contact with a trigger collider
-                        set on the top-middle of it and the ladder does a similar thing when the player is moving
-                        into the front of the ladder. 
+                    <p>I was responsible for programming the custom interaction behavior for various objects in
+                        the game. The trampoline detects overlapping rigidbodies and uses a trigger collider on
+                        the top to apply an upward force. The ladder also uses a similar trigger-based collision
+                        system, initiating climbing mechanics when a player moves forward into the ladder.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -101,6 +99,11 @@
                         it into Unity to set it up to play. I added specific object prefabs in the locations
                         they were outlined on the design image for the level and then playtested through it
                         to confirm it was possible to beat, but also that there were no unintended solutions.
+
+                        Once our puzzle and level designer finished whiteboxing and modeling the levels, I
+                        integrated the assets into Unity to make them functional. I placed object prefabs
+                        according to the level design documentation, then playtested the results to verify
+                        it was beatable and patch out any unintended solutions.
                     </p>
                 </div>
                 <div class="row-media-box">
