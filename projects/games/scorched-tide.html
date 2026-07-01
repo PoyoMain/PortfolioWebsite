@@ -25,10 +25,10 @@
             <h1>Scorched Tide</h1>
             <p class="wireframe-intro-p">
                 In Summer 2024, I was invited onto a team to participate in the Godot Wild Jam #69. We created Scorched Tide,
-                a wave shooter where you have to defend yourself on a desolated planet from undead fish trying to collect enough
+                a wave shooter where you have to defend yourself on a desolated planet from undead fish. You need to try to collect enough
                 oil to fuel your ship, fuel the tools you use to defend yourself, and enough to be allowed to come home to your
                 home planet. While we missed the inital deadline for the initial jam, we kept working to submit it to the F*ck
-                Capitalism Jam 2024
+                Capitalism Jam 2024.
             </p>
             <div class="download-action-row">
                 <a href="https://will-wrigh.itch.io/scorched-tide" class="pill-btn" target="_blank">Download Page</a>
@@ -50,7 +50,7 @@
             </div>
             <div class="meta-column">
                 <span class="meta-title">Engine/Tools</span>
-                <span class="meta-val">Unity / C#</span>
+                <span class="meta-val">Godot / C#</span>
             </div>
         </section>
 
@@ -78,8 +78,8 @@
                     <h3>Enemy AI</h3>
                     <p>The enemies constantly track and advance toward the player, stopping when they get close to attack 
                         at a fixed rate. To handle navigation across uneven terrain, I used Godot's NavigationMesh system. 
-                        Each enemy use a NavigationAgent3D node to calculate the path to the player. I made large rocks,
-                        interactive tools, and the main ship as NavigationObstacle3D objects to refine the pathfinding
+                        Each enemy uses a NavigationAgent3D node to calculate the path to the player. I made large rocks,
+                        interactive tools, and the main ship as NavigationObstacle3D objects to refine the pathfinding.
                     </p>
                 </div>
                 <div class="row-media-box">
@@ -98,7 +98,7 @@
                     <p>Players defend themselves using a blaster and automated turrets. Since both systems share the
                         same projectile logic, I use a class solely to instantiate the bullets while putting the control logic
                         into manual and automatic tracking classes. The turret uses an Area3D node with collision layers to scan
-                        for enemies. If an enemy enters the radues and the turret has fuel it rotates to shoot the enemy.
+                        for enemies. If an enemy enters the radius and the turret has fuel it rotates to shoot the enemy.
                     </p>
                 </div>
                 <div class="row-media-box">

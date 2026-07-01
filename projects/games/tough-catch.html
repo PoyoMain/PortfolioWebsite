@@ -24,7 +24,7 @@
         <header class="wireframe-case-header">
             <h1>Tough Catch</h1>
             <p class="wireframe-intro-p">
-                In Fall 2024, I was the teamlead and head programmer for Tough Catch, a
+                In Fall 2024, I was the team lead and head programmer for Tough Catch, a
                 fishing game where you play as a cyborg and have to use your robot parts
                 and fishing rod to go through several different fishing minigames to try
                 and catch the big boss of the lake. I handled the art and music
@@ -59,9 +59,9 @@
             <section class="alternating-row">
                 <div class="row-text">
                     <h3>Scriptable Object Event System</h3>
-                    <p>For Tough Catch, I implemented an system using Scriptable Objects to handle decoupled event communication 
+                    <p>For Tough Catch, I implemented a system using Scriptable Objects to handle decoupled event communication 
                         across separate game systems. Each minigame subscribes to an asset-based event channel to listen 
-                        for when they should start and broadcasts a completion event back through a Scriptable Object when it concludes. 
+                        for when they should start and broadcast a completion event back through a Scriptable Object when it concludes. 
                         I expanded this event framework to manage player damage logic, track captured fish data, and 
                         broadcast state changes.
                     </p>
@@ -79,15 +79,7 @@
             <section class="alternating-row reversed">
                 <div class="row-text">
                     <h3>Tuggle Phase Minigames</h3>
-                    <p>The minigames for this portion of the game all come at you at the same time, with a
-                        maximum at two happening at any particular moment so I wanted to have a state machine
-                        that juggles between the minigames in this phase and present them to the player, waiting
-                        until it finishes to shuffle a new one. Each minigame derives from a base class so if a
-                        minigame is designed and has the components necessary for it to start, run, and end, it can
-                        be added to this phase, or any phase in the game, and will play as normal. This way it's modular
-                        and was easy to add more minigames when ideas came up for new ones.
-
-                        The minigames in this phase happen quickly, with up to two challenges happening simultaneously on screen. 
+                    <p>The minigames in this phase happen quickly, with up to two challenges happening simultaneously on screen. 
                         To manage this loop, I made state machine that shuffles active challenges and sends them 
                         procedurally to the player. Each minigame inherits from an abstract base class handling the base execution 
                         behavior, making a modular system that lets the minigame designers put in new gameplay ideas into any
